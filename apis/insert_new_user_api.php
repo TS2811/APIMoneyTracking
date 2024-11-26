@@ -26,7 +26,7 @@ if ($data->userImage != "") {
     if (in_array($mime_type, $allowed_file_types)) {
         // สร้างชื่อไฟล์ใหม่โดยใช้นามสกุลของไฟล์
         $img_extension = ($mime_type == 'image/png') ? '.png' : (($mime_type == 'image/jpeg' || $mime_type == 'image/jpg') ? '.jpg' : '.gif');
-        $img_filename = "user_" . $data->username . "_" . uniqid() . str_pad(rand(0, 9999), 4, '0', STR_PAD_LEFT) . "_" . time() . $img_extension;
+        $img_filename = "user_" . $data->userName . "_" . uniqid() . str_pad(rand(0, 9999), 4, '0', STR_PAD_LEFT) . "_" . time() . $img_extension;
 
         file_put_contents("./../images/user/" . $img_filename, $image_data);
     }

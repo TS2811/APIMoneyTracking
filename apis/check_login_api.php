@@ -34,10 +34,10 @@ if ($result->rowCount() > 0) {
             "message" => "1",
             "userId" => strval($userId),
             "userFullname" => $userFullname,
-            "username" => $username,
+            "userBirthDate" => $userBirthDate,
+            "userName" => $userName,
             "userPassword" => $userPassword,
             "userImage" => $base64Image, // ส่งภาพแบบ Base64
-            "userCreatedDate" => $userCreatedDate,
         );
         array_push($resultData, $resultArray);
     }
