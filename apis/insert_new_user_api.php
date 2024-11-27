@@ -28,7 +28,7 @@ if ($data->userImage != "") {
         $img_extension = ($mime_type == 'image/png') ? '.png' : (($mime_type == 'image/jpeg' || $mime_type == 'image/jpg') ? '.jpg' : '.gif');
         $img_filename = "user_" . $data->userName . "_" . uniqid() . str_pad(rand(0, 9999), 4, '0', STR_PAD_LEFT) . "_" . time() . $img_extension;
 
-        file_put_contents("./../images/user/" . $img_filename, $image_data);
+        file_put_contents("./../images/users/" . $img_filename, $image_data);
     }
 }
 
