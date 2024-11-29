@@ -41,8 +41,8 @@ class money
         $moneyDetail = htmlspecialchars(strip_tags($moneyDetail));
         $moneyDateTime = htmlspecialchars(strip_tags($moneyDateTime));
         $moneyInOut = htmlspecialchars(strip_tags($moneyInOut));
-        $moneyType = htmlspecialchars(strip_tags($moneyType));
-        $userId = htmlspecialchars(strip_tags($userId));
+        $moneyType = intval(htmlspecialchars(strip_tags($moneyType)));
+        $userId = intval(htmlspecialchars(strip_tags($userId)));
 
         $stmt = $this->connDB->prepare($query);
 

@@ -26,8 +26,8 @@ if ($result->rowCount() > 0) {
             "userId" => strval($userId),
             "moneyDetail" => $moneyDetail,
             "moneyDateTime" => $moneyDateTime,
-            "moneyInOut" => $moneyInOut,
-            "moneyType" => $moneyType,
+            "moneyInOut" => strval($moneyInOut),
+            "moneyType" => strval($moneyType),
         );
         array_push($resultData, $resultArray);
     }
